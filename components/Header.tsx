@@ -1,6 +1,5 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
 import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
@@ -13,11 +12,11 @@ const Header = () => {
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
             <div className="mr-3">
-              <Logo />
+              {/* <Logo /> */}
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
               <div className="hidden h-6 text-2xl font-semibold sm:block">
-                {siteMetadata.headerTitle}
+                FAB<b>LAB</b> Blog
               </div>
             ) : (
               siteMetadata.headerTitle
@@ -37,7 +36,6 @@ const Header = () => {
               {link.title}
             </Link>
           ))}
-        <SearchButton />
         <ThemeSwitch />
         <MobileNav />
       </div>
